@@ -24,7 +24,8 @@ namespace AutoRemoveFromRecyleBin
 
                 for (int i = 0; i < recycledFilenames.Length; i++)
                 {
-                    if (recycledFilenames[i].EndsWith(".gsl"))
+                    if (recycledFilenames[i].EndsWith(".gsl")  ||
+                        recycledFilenames[i].StartsWith("Full Backup 20"))
                         File.Delete(recycledPaths[i]);
                 }
 
